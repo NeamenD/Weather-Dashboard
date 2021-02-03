@@ -1,0 +1,118 @@
+<doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viwport" content="width=device-width, initial-scale=1.0"/>
+            <title>Wether-In</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <link rel="stylesheet" href="style.css"/>
+            <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            </head>
+            <body>
+                
+                <header> Weather-Dashboard</header>
+                <div class="home">
+
+                
+                <div class="row">
+                    <div class="col-sm-3  leftSide">
+                        <label for='city-search'><h2>Search for a City:</h2></label>
+                        <form class="example" action="action_page.php">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                        <ul id="list">
+                            <li class="list-group-item ">Austin</li>
+                            <li class="list-group-item">Chicago</li>
+                            <li class="list-group-item">New York</li>
+                            <li class="list-group-item">Orlado</li>
+                            <li class="list-group-item">San Francisco</li>
+                            <li class="list-group-item">Seattle</li>
+                            <li class="list-group-item">Denver</li>
+                            <li class="list-group-item">Atlanta</li>
+                        </ul>
+
+                        
+
+                    </div>
+                    
+                
+                <div class='col-md-9'>
+                    <div class="p-2" id="current-weather">
+                        <h1 id="current-city-name">Atlanta</h1>
+                        <p id="lblTemp"> Temprature: </p>
+                        <p id="lblTemp"> Humidity: </p>
+                        <p id="lblTemp"> Wind Speed: </p>
+                        <p id="lblTemp"> UV Index: </p>
+
+                    </div>
+
+                    <div style="margin-left: 6px;" class="p-2" >
+                        <h1>5-Day Forecast</h1>
+                        <div class="row text-light">
+                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 border">
+                                <p id="Date0">Sample Date</p>
+                                <p id="fImg0"></p>
+                                <p>Temp:<span id="fTemp0"></span></p>
+                                <p>Humidity:<span id="fHumidity0"></span></p>
+                            </div>
+
+                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                                <p id="Date1"></p>
+                                <p id="fImg1"></p>
+                                <p>Temp:<span id="fTemp1"></span></p>
+                                <p>Humidity:<span id="fHumidity1"></span></p>
+                            </div>
+
+                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                                <p id="Date1"></p>
+                                <p id="fImg1"></p>
+                                <p>Temp:<span id="fTemp1"></span></p>
+                                <p>Humidity:<span id="fHumidity1"></span></p>
+                            </div>
+
+                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                                <p id="Date1"></p>
+                                <p id="fImg1"></p>
+                                <p>Temp:<span id="fTemp1"></span></p>
+                                <p>Humidity:<span id="fHumidity1"></span></p>
+                            </div>
+
+                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                                <p id="Date1"></p>
+                                <p id="fImg1"></p>
+                                <p>Temp:<span id="fTemp1"></span></p>
+                                <p>Humidity:<span id="fHumidity1"></span></p>
+                            </div>
+                        </div>                         
+
+
+                    </div>
+
+                </div>
+                </div>
+                </div>
+            </div>
+
+
+
+
+
+                
+
+                
+
+
+
+
+            <script src="javascrip.js"></script>
+        </body>
+    </html>
+</doctype>
