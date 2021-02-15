@@ -1,23 +1,16 @@
-html {
+* {
   box-sizing: border-box;
 }
 
-button {
-  margin-left: 30px;
+body {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-header {
-  font-size: 350%;
-  background-color: rgb(41, 39, 39);
-  font-style: "Noto Serif TC", serif;
-  color: white;
-  text-align: center;
-  margin: 0%;
-  padding: 0%;
+h3 {
+  font-weight: bold;
 }
-
-#five-day {
-  justify-content: center;
+.forecast {
+  font-size: 0.9em;
 }
 
 #h1 {
@@ -34,37 +27,9 @@ h1 {
 }
 
 span {
-  padding: 5px;
+  font-size: 1em;
 }
-
-#text-light {
-  margin-right: 10px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-#list {
-  background-color: lightskyblue;
-  color: black;
-  margin-top: 10px;
-  margin: 10px;
-  margin-right: 15px;
-  padding: 10px;
-}
-#current-weather {
-  background-color: lightskyblue;
-  color: black;
-  margin-top: 10px;
-  margin: 10px;
-  margin-right: 15px;
-  height: 50%;
-  padding: 10px;
-}
-.leftSide {
-  background-color: rgb(241, 236, 236);
-  padding: 20px;
-  padding-left: 50px;
-  padding-top: 0px;
+li:hover {
+  background-color: lightslategray;
+  text-decoration: underline;
 }

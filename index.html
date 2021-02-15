@@ -1,118 +1,110 @@
-<doctype html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8" />
-            <meta name="viwport" content="width=device-width, initial-scale=1.0"/>
-            <title>Wether-In</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-       <link rel="stylesheet" href="style.css"/>
-            <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            </head>
-            <body>
-                
-                <header> Weather-Dashboard</header>
-                <div class="home">
+<!DOCTYPE html>
+<html lang="en">
 
-                
-                <div class="row">
-                    <div class="col-sm-3  leftSide">
-                        <label for='city-search'><h2>Search for a City:</h2></label>
-                        <form class="example" action="action_page.php">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                        <ul id="list">
-                            <li class="list-group-item ">Austin</li>
-                            <li class="list-group-item">Chicago</li>
-                            <li class="list-group-item">New York</li>
-                            <li class="list-group-item">Orlado</li>
-                            <li class="list-group-item">San Francisco</li>
-                            <li class="list-group-item">Seattle</li>
-                            <li class="list-group-item">Denver</li>
-                            <li class="list-group-item">Atlanta</li>
-                        </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-                        
-
+<body>
+    
+    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
+        <h1> <strong>Weather Dashboard</strong></h1>
+    </div>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+               
+                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+               
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-city" aria-label="City Search"
+                        aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i
+                                class="fa fa-search"></i></button>
+                                
                     </div>
                     
+                </div>
+                <h5 class="pt-1"><strong>City List:</strong></h>
+                    
+               <ul class="list-group">
+                 <li class="list-group-item">Austin</li>
+                 <li class="list-group-item">Chicago</li>
+                 <li class="list-group-item">New York</li>
+                 <li class="list-group-item">Orlando</li>
+                 <li class="list-group-item">San Francisco</li>
+                 <li class="list-group-item">Seattle</li>
+                 <li class="list-group-item">Colorado</li>
+                 <li class="list-group-item">Atlanta</li>
                 
-                <div class='col-md-9'>
-                    <div class="p-2" id="current-weather">
-                        <h1 id="current-city-name">Atlanta</h1>
-                        <p id="lblTemp"> Temprature: </p>
-                        <p id="lblTemp"> Humidity: </p>
-                        <p id="lblTemp"> Wind Speed: </p>
-                        <p id="lblTemp"> UV Index: </p>
-
-                    </div>
-
-                    <div style="margin-left: 6px;" class="p-2" >
-                        <h1>5-Day Forecast</h1>
-                        <div class="row text-light">
-                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 border">
-                                <p id="Date0">Sample Date</p>
-                                <p id="fImg0"></p>
-                                <p>Temp:<span id="fTemp0"></span></p>
-                                <p>Humidity:<span id="fHumidity0"></span></p>
-                            </div>
-
-                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="Date1"></p>
-                                <p id="fImg1"></p>
-                                <p>Temp:<span id="fTemp1"></span></p>
-                                <p>Humidity:<span id="fHumidity1"></span></p>
-                            </div>
-
-                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="Date1"></p>
-                                <p id="fImg1"></p>
-                                <p>Temp:<span id="fTemp1"></span></p>
-                                <p>Humidity:<span id="fHumidity1"></span></p>
-                            </div>
-
-                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="Date1"></p>
-                                <p id="fImg1"></p>
-                                <p>Temp:<span id="fTemp1"></span></p>
-                                <p>Humidity:<span id="fHumidity1"></span></p>
-                            </div>
-
-                            <div style="margin: 10px;" class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                                <p id="Date1"></p>
-                                <p id="fImg1"></p>
-                                <p>Temp:<span id="fTemp1"></span></p>
-                                <p>Humidity:<span id="fHumidity1"></span></p>
-                            </div>
-                        </div>                         
-
-
-                    </div>
-
-                </div>
-                </div>
-                </div>
+                </ul>
             </div>
-
-
-
-
-
+            <div class="col-sm-8">
+                <div class="row ml-2 border border-dark rounded">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p>Temperature:<span class="current" id="temperature"></span></p>
+                        <p>Humidity:<span class="current" id="humidity"></span></p>
+                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                        
+                        </p>
+                    </div>
+                </div>
                 
+                <div class="col-sm-12" id="future-weather">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light">
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate0"></p>
+                            <p id="fImg0"></p>
+                            <p>Temp:<span id="fTemp0"></span></p>
+                            <p>Humidity:<span id="fHumidity0"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate1"></p>
+                            <p id="fImg1"></p>
+                            <p>Temp:<span id="fTemp1"></span></p>
+                            <p>Humidity:<span id="fHumidity1"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate2"></p>
+                            <p id="fImg2"></p>
+                            <p>Temp:<span id="fTemp2"></span></p>
+                            <p>Humidity:<span id="fHumidity2"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate3"></p>
+                            <p id="fImg3"></p>
+                            <p>Temp:<span id="fTemp3"></span></p>
+                            <p>Humidity:<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate4"></p>
+                            <p id="fImg4"></p>
+                            <p>Temp:<span id="fTemp4"></span></p>
+                            <p>Humidity:<span id="fHumidity4"></span></p>
+                        </div>
+                    </div>
+                </div>
 
-                
+            </div>
+        </div>
+    </div>
+    
 
-
-
-
-            <script src="javascrip.js"></script>
-        </body>
-    </html>
-</doctype>
+   
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="script.js"></script>
+</body>
